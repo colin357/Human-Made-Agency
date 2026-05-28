@@ -14,7 +14,7 @@
   --accent:       oklch(57% 0.21  28);
   --accent-dark:  oklch(38% 0.18  28);
   --border:       oklch(88% 0.009 80);
-  --white:        oklch(99% 0.003 80);
+  --white:        oklch(98% 0.012 80);
 
   --font-display: 'Cabinet Grotesk', system-ui, sans-serif;
   --font-body:    'Literata', Georgia, serif;

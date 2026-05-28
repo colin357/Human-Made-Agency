@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Human Made — Branding &amp; Customer Follow-Up, Done by Humans</title>
-  <meta name="description" content="An anti-AI agency doing branding and customer follow-up the way it should be done — by real people, with real care.">
+  <meta name="description" content="An agency doing branding and customer follow-up the way it should be done, by real people who care about your business.">
   <meta name="theme-color" content="#f5ede4">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ── Nav ── -->
+  <!-- ── Nav (appears after scrolling past hero) ── -->
   <header class="nav" id="nav">
     <div class="nav__inner container">
       <a class="nav__logo" href="#">Human Made</a>
@@ -20,19 +20,21 @@
 
   <!-- ── Hero ── -->
   <section class="hero" id="home" aria-label="Hero">
-    <div class="hero__eyebrow reveal">
-      <span class="label">Est. 2024 &middot; Anti-AI Agency</span>
-      <span class="hero__ticker" aria-hidden="true"></span>
-    </div>
-
     <h1 class="hero__headline">
       <span class="hero__line1 reveal" style="--delay: 80ms">Human</span>
       <span class="hero__line2 reveal" style="--delay: 180ms">Made<span class="accent">.</span></span>
     </h1>
 
     <div class="hero__body reveal" style="--delay: 320ms">
-      <p class="hero__sub">While everyone else outsources their voice to a machine, we keep it personal. Real branding. Real follow-up. Real results.</p>
-      <button class="btn btn--primary btn-book" type="button">Book a Discovery Call &rarr;</button>
+      <div class="hero__heart" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <div class="hero__body-bottom">
+        <p class="hero__sub">We build brands and follow up with leads the way you&rsquo;d want it done if you had more hours in the day.</p>
+        <button class="btn btn--primary btn-book" type="button">Book a Discovery Call &rarr;</button>
+      </div>
     </div>
   </section>
 
@@ -45,14 +47,14 @@
       </div>
       <div class="why__grid">
         <div class="why__copy reveal" style="--delay: 100ms">
-          <p class="why__lead">Somewhere between the AI chatbots and the automated email sequences, businesses lost the thing that made them different &mdash; their humanity.</p>
-          <p>We work with companies that understand this. You know your brand has a voice. You know your leads deserve a real conversation. You just need someone who can deliver that at scale without losing the soul.</p>
-          <p>Every message sent from our team is written by a person who actually read your brief, knows your customers, and cares whether they respond.</p>
+          <p class="why__lead">Somewhere between the AI chatbots and the automated email sequences, businesses lost the thing that made them different: their humanity.</p>
+          <p>We work with companies that get it. You know your brand has a voice. You know your leads deserve a real conversation. You just need someone who can deliver that without losing the soul of what you built.</p>
+          <p>Every message that goes out from our team is written by a person who read your brief, knows your customers, and actually cares whether they respond.</p>
         </div>
         <div class="why__visual reveal" style="--delay: 200ms">
           <figure class="why__quote">
-            <blockquote>&ldquo;The brands that will win the next decade aren&rsquo;t the ones that automate the most &mdash; they&rsquo;re the ones that feel the most human.&rdquo;</blockquote>
-            <figcaption class="label">Human Made &mdash; 2024</figcaption>
+            <blockquote>&ldquo;Your leads can tell when a message came from a real person. That difference is everything.&rdquo;</blockquote>
+            <figcaption class="label">Human Made, 2024</figcaption>
           </figure>
         </div>
       </div>
@@ -68,7 +70,7 @@
         <span class="service__number" aria-hidden="true">01</span>
         <div class="service__content">
           <h3 class="service__name">Branding</h3>
-          <p class="service__desc">We build brands that feel like they were made by people who actually give a damn. Identity, voice, visuals &mdash; all of it crafted by hand with your story at the center. No templates. No AI-generated assets. Just real creative work that makes your business impossible to ignore.</p>
+          <p class="service__desc">We build brands that feel like they were made by people who actually care. Identity, voice, visuals, all crafted by hand with your story at the center. No templates, no AI-generated assets. Just real creative work that makes your business impossible to forget.</p>
         </div>
       </div>
 
@@ -76,13 +78,13 @@
         <span class="service__number" aria-hidden="true">02</span>
         <div class="service__content">
           <h3 class="service__name">Customer Follow-Up</h3>
-          <p class="service__desc">Your leads are people. We follow up like it &mdash; real messages, real timing, real care. No templates that feel like templates. Just conversations written by someone who understands what your prospect actually needs, and knows when to send them.</p>
+          <p class="service__desc">We make follow-up personal. Not only do we create great text and email campaigns to reach your database, but we can also make phone calls to follow up and check in with past leads and clients.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Team ── -->
+  <!-- ── Team Slider ── -->
   <section class="team" id="team" aria-labelledby="team-title">
     <div class="team__inner">
       <div class="team__header reveal">
@@ -90,51 +92,94 @@
         <p class="team__intro">Real people, real accountability. You&rsquo;ll always know who&rsquo;s working on your brand.</p>
       </div>
 
-      <div class="team__grid">
+      <div class="team__slider reveal" style="--delay: 100ms">
+        <div class="slider-row">
 
-        <article class="member reveal" style="--delay: 0ms">
-          <div class="member__photo-wrap" id="photo-wrap-colin">
-            <img class="member__photo"
-                 src="photo-colin.jpg"
-                 alt="Colin, digital marketer at Human Made"
-                 width="480" height="600"
-                 loading="lazy"
-                 onerror="this.style.display='none';document.getElementById('photo-wrap-colin').classList.add('member__photo--missing')">
-            <span class="member__name" aria-hidden="true">Colin</span>
-          </div>
-          <div class="member__info">
-            <p class="member__quote-text">Hi, I&rsquo;m Colin and I&rsquo;m a digital marketer.</p>
-            <span class="label">Digital Marketing</span>
-          </div>
-        </article>
+          <button class="slider-btn slider-btn--prev" aria-label="Previous team member">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
 
-        <article class="member reveal" style="--delay: 100ms">
-          <div class="member__photo-wrap" id="photo-wrap-taylor">
-            <img class="member__photo"
-                 src="photo-taylor.jpg"
-                 alt="Taylor, graphic designer at Human Made"
-                 width="480" height="600"
-                 loading="lazy"
-                 onerror="this.style.display='none';document.getElementById('photo-wrap-taylor').classList.add('member__photo--missing')">
-            <span class="member__name" aria-hidden="true">Taylor</span>
-          </div>
-          <div class="member__info">
-            <p class="member__quote-text">Hi, I&rsquo;m Taylor and I&rsquo;m a graphic designer.</p>
-            <span class="label">Graphic Design</span>
-          </div>
-        </article>
+          <div class="team-slides-wrapper">
 
-        <article class="member member--placeholder reveal" style="--delay: 200ms" aria-label="Future team member placeholder">
-          <div class="member__photo-wrap member__photo--missing">
-            <span class="member__name" aria-hidden="true">You?</span>
-          </div>
-          <div class="member__info">
-            <p class="member__quote-text">We&rsquo;re growing. More humans joining soon.</p>
-            <span class="label">Coming Soon</span>
-          </div>
-        </article>
+            <!-- Slide: Colin -->
+            <div class="team-slide slide--active" role="group" aria-label="Colin, Digital Marketing">
+              <article class="member">
+                <div class="member__photo-wrap" id="photo-wrap-colin">
+                  <img class="member__photo"
+                       src="photo-colin.jpg"
+                       alt="Colin, digital marketer at Human Made"
+                       width="480" height="600"
+                       loading="lazy"
+                       onerror="this.style.display='none';document.getElementById('photo-wrap-colin').classList.add('member__photo--missing')">
+                  <div class="member__sig-wrap">
+                    <img src="sig-colin.png" alt="" class="member__sig-img"
+                         onerror="this.style.display='none'">
+                  </div>
+                  <span class="member__name" aria-hidden="true">Colin</span>
+                </div>
+                <div class="member__info">
+                  <p class="member__quote-text">Hi, I&rsquo;m Colin and I&rsquo;m a digital marketer.</p>
+                  <span class="label">Digital Marketing</span>
+                </div>
+              </article>
+            </div>
 
+            <!-- Slide: Taylor -->
+            <div class="team-slide" role="group" aria-label="Taylor, Graphic Design">
+              <article class="member">
+                <div class="member__photo-wrap" id="photo-wrap-taylor">
+                  <img class="member__photo"
+                       src="photo-taylor.jpg"
+                       alt="Taylor, graphic designer at Human Made"
+                       width="480" height="600"
+                       loading="lazy"
+                       onerror="this.style.display='none';document.getElementById('photo-wrap-taylor').classList.add('member__photo--missing')">
+                  <div class="member__sig-wrap">
+                    <img src="sig-taylor.png" alt="" class="member__sig-img"
+                         onerror="this.style.display='none'">
+                  </div>
+                  <span class="member__name" aria-hidden="true">Taylor</span>
+                </div>
+                <div class="member__info">
+                  <p class="member__quote-text">Hi, I&rsquo;m Taylor and I&rsquo;m a graphic designer.</p>
+                  <span class="label">Graphic Design</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Slide: Placeholder -->
+            <div class="team-slide" role="group" aria-label="Coming soon">
+              <article class="member member--placeholder">
+                <div class="member__photo-wrap member__photo--missing">
+                  <div class="member__sig-wrap"></div>
+                  <span class="member__name" aria-hidden="true">You?</span>
+                </div>
+                <div class="member__info">
+                  <p class="member__quote-text">We&rsquo;re growing. More humans joining soon.</p>
+                  <span class="label">Coming Soon</span>
+                </div>
+              </article>
+            </div>
+
+          </div>
+
+          <button class="slider-btn slider-btn--next" aria-label="Next team member">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+        </div>
+
+        <div class="slider-dots" role="list" aria-label="Team member navigation">
+          <button class="slider-dot dot--active" role="listitem" aria-label="Colin"></button>
+          <button class="slider-dot" role="listitem" aria-label="Taylor"></button>
+          <button class="slider-dot" role="listitem" aria-label="Coming soon"></button>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -142,10 +187,14 @@
   <section class="cta" id="contact" aria-label="Book a call">
     <div class="cta__inner">
       <h2 class="cta__headline reveal">Ready to be remembered?</h2>
-      <p class="cta__sub reveal" style="--delay: 100ms">No bots. No templates. Just a real conversation about what your business actually needs.</p>
+      <p class="cta__sub reveal" style="--delay: 100ms">Schedule a call and tell us about your business. We take it from there.</p>
       <button class="btn btn--outline-white btn-book reveal" style="--delay: 220ms" type="button">Book a Call &rarr;</button>
     </div>
-    <span class="cta__bg-word" aria-hidden="true">Human.</span>
+    <span class="cta__bg-heart" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    </span>
   </section>
 
   <!-- ── Footer ── -->
@@ -175,11 +224,15 @@
   </div>
 
   <script>
-    // ── Sticky nav ──
+    // ── Nav: show after scrolling past hero ──
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 60);
-    }, { passive: true });
+    const heroEl = document.getElementById('home');
+
+    function updateNav() {
+      nav.classList.toggle('nav--visible', window.scrollY >= heroEl.offsetHeight * 0.85);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
 
     // ── Scroll reveal ──
     const revealObserver = new IntersectionObserver((entries) => {
@@ -192,26 +245,51 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // ── Hero ticker ──
-    const ticker = document.querySelector('.hero__ticker');
-    if (ticker) {
-      const messages = [
-        'Available for new projects',
-        '2 spots remaining this month',
-        'Real humans. Real results. Always.',
-        'Anti-AI, pro-human since 2024',
-      ];
-      let i = 0;
-      ticker.textContent = messages[0];
-      setInterval(() => {
-        ticker.style.opacity = '0';
-        setTimeout(() => {
-          i = (i + 1) % messages.length;
-          ticker.textContent = messages[i];
-          ticker.style.opacity = '1';
-        }, 300);
-      }, 3500);
-    }
+    // ── Team slider ──
+    (function () {
+      const slides = Array.from(document.querySelectorAll('.team-slide'));
+      const dots   = Array.from(document.querySelectorAll('.slider-dot'));
+      let current = 0;
+      let autoTimer = null;
+      let autoStopped = false;
+
+      function goTo(n) {
+        slides[current].classList.remove('slide--active');
+        dots[current].classList.remove('dot--active');
+        current = ((n % slides.length) + slides.length) % slides.length;
+        slides[current].classList.add('slide--active');
+        dots[current].classList.add('dot--active');
+      }
+
+      function startAuto() {
+        if (autoStopped) return;
+        autoTimer = setInterval(() => goTo(current + 1), 15000);
+      }
+
+      function stopAuto() {
+        autoStopped = true;
+        clearInterval(autoTimer);
+      }
+
+      document.querySelector('.slider-btn--prev').addEventListener('click', () => {
+        stopAuto();
+        goTo(current - 1);
+      });
+
+      document.querySelector('.slider-btn--next').addEventListener('click', () => {
+        stopAuto();
+        goTo(current + 1);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          stopAuto();
+          goTo(i);
+        });
+      });
+
+      startAuto();
+    })();
 
     // ── Booking modal ──
     const modal    = document.getElementById('booking-modal');
@@ -231,16 +309,9 @@
       if (lastFocused) lastFocused.focus();
     }
 
-    document.querySelectorAll('.btn-book').forEach(btn => {
-      btn.addEventListener('click', openModal);
-    });
-
+    document.querySelectorAll('.btn-book').forEach(btn => btn.addEventListener('click', openModal));
     closeBtn.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', e => {
-      if (e.target === modal) closeModal();
-    });
-
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && modal.classList.contains('modal--open')) closeModal();
     });

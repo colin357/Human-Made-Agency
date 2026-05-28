@@ -763,10 +763,15 @@ h1, h2, h3 {
   transition: background var(--dur-fast) ease;
 }
 .modal-close:hover { background: var(--border); }
-.modal-iframe {
+.modal-calendly-wrap {
   flex: 1;
-  width: 100%;
-  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+}
+.modal-calendly-wrap .calendly-inline-widget {
+  height: 100% !important;
+  min-width: 0 !important;
 }
 .modal-fallback {
   padding: 0.75rem var(--sp-md);

@@ -7,6 +7,7 @@
   <meta name="description" content="An agency doing branding and customer follow-up the way it should be done, by real people who care about your business.">
   <meta name="theme-color" content="#f5ede4">
   <link rel="stylesheet" href="style.css">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
 <body>
 
@@ -78,7 +79,7 @@
         <span class="service__number" aria-hidden="true">02</span>
         <div class="service__content">
           <h3 class="service__name">Customer Follow-Up</h3>
-          <p class="service__desc">We make follow-up personal. Not only do we create great text and email campaigns to reach your database, but we can also make phone calls to follow up and check in with past leads and clients.</p>
+          <p class="service__desc">We make follow-up personal. Not only do we create great text and email campaigns to reach your database, we also make phone calls to check in with past leads and clients, and send handwritten thank-you cards to your clients.</p>
         </div>
       </div>
     </div>
@@ -213,13 +214,10 @@
   <div class="modal-overlay" id="booking-modal" role="dialog" aria-modal="true" aria-label="Book a call with Human Made">
     <div class="modal-box">
       <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
-      <iframe
-        class="modal-iframe"
-        src="https://outlook.office.com/bookwithme/user/6b42ea0907f149009514aafd7bbbab53@ownitsocial.com/meetingtype/Q3aDqREcp0qJ3A9VXAZ9wQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
-        title="Book a call with Human Made"
-        loading="lazy">
-      </iframe>
-      <p class="modal-fallback">Trouble loading? <a href="https://outlook.office.com/bookwithme/user/6b42ea0907f149009514aafd7bbbab53@ownitsocial.com/meetingtype/Q3aDqREcp0qJ3A9VXAZ9wQ2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile" target="_blank" rel="noopener noreferrer">Open booking page directly &rarr;</a></p>
+      <div class="modal-calendly-wrap">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/colinownitsocial/30min" style="min-width:320px;height:700px;"></div>
+      </div>
+      <p class="modal-fallback">Trouble loading? <a href="https://calendly.com/colinownitsocial/30min" target="_blank" rel="noopener noreferrer">Open booking page directly &rarr;</a></p>
     </div>
   </div>
 

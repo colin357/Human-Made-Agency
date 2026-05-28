@@ -647,14 +647,14 @@ h1, h2, h3 {
    ================================================ */
 .work {
   overflow: hidden;
-  padding-top: clamp(var(--sp-lg), 8vw, var(--sp-xl));
-  padding-bottom: clamp(var(--sp-xl), 14vw, var(--sp-2xl));
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
   padding-inline: var(--pad-x);
 }
 .work__header {
   max-width: var(--max-w);
   margin-inline: auto;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
 }
 .work__title {
   font-family: var(--font-display);
@@ -670,23 +670,19 @@ h1, h2, h3 {
   max-width: 24ch;
   line-height: 1.5;
 }
-
-/* Stripe layout */
 .work__gallery { display: block; }
-
 .work__stripe {
   display: flex;
   gap: clamp(0.75rem, 1.5vw, 1.25rem);
   width: 100vw;
   margin-left: calc(-1 * var(--pad-x));
-  transform: rotate(-7deg);
+  transform: rotate(7deg);
 }
 .work__stripe--2 {
-  margin-top: clamp(1.25rem, 2vw, 1.75rem);
+  margin-top: 1.5rem;
 }
-
 .work-card {
-  flex: 1;
+  flex: 0 0 clamp(180px, 24vw, 310px);
   min-width: 0;
   background: var(--white);
   padding: 0.6rem 0.6rem 2rem;
@@ -718,8 +714,6 @@ h1, h2, h3 {
     var(--border) 20px
   );
 }
-
-/* Mobile: 2-col grid, no diagonal */
 @media (max-width: 767px) {
   .work__gallery {
     display: grid;

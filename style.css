@@ -674,7 +674,7 @@ h1, h2, h3 {
 }
 .work__gallery {
   position: absolute;
-  top: 8%;
+  top: 20%;
   right: -8%;
   width: clamp(560px, 58vw, 820px);
   display: grid;

@@ -674,14 +674,14 @@ h1, h2, h3 {
 }
 .work__gallery {
   position: absolute;
-  top: 12%;
-  left: 22%;
-  width: clamp(440px, 40vw, 580px);
+  top: 8%;
+  right: -8%;
+  width: clamp(440px, 42vw, 600px);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(0.75rem, 1.5vw, 1.25rem);
   transform: rotate(10deg);
-  transform-origin: top left;
+  transform-origin: top right;
   z-index: 1;
 }
 .work-card {
@@ -724,7 +724,8 @@ h1, h2, h3 {
     position: static;
     width: 100%;
     transform: none;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    grid-template-columns: 1fr;
   }
 }
 

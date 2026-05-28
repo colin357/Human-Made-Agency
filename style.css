@@ -676,9 +676,9 @@ h1, h2, h3 {
   position: absolute;
   top: 8%;
   right: -8%;
-  width: clamp(440px, 42vw, 600px);
+  width: clamp(560px, 58vw, 820px);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(0.75rem, 1.5vw, 1.25rem);
   transform: rotate(10deg);
   transform-origin: top right;

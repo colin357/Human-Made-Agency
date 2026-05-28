@@ -403,7 +403,8 @@ h1, h2, h3 {
    ================================================ */
 .team {
   background: var(--surface);
-  padding-block: clamp(var(--sp-lg), 10vw, var(--sp-xl));
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  padding-bottom: clamp(var(--sp-lg), 10vw, var(--sp-xl));
   padding-inline: var(--pad-x);
 }
 .team__inner { max-width: var(--max-w); margin-inline: auto; }
@@ -595,7 +596,7 @@ h1, h2, h3 {
    ================================================ */
 .trusted {
   background: var(--surface);
-  padding-block: clamp(3rem, 6vw, 4.5rem);
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
   padding-inline: var(--pad-x);
 }
 .trusted__inner {
@@ -645,18 +646,15 @@ h1, h2, h3 {
    OUR WORK
    ================================================ */
 .work {
-  padding-block: clamp(var(--sp-lg), 10vw, var(--sp-xl));
+  overflow: hidden;
+  padding-top: clamp(var(--sp-lg), 8vw, var(--sp-xl));
+  padding-bottom: clamp(var(--sp-xl), 14vw, var(--sp-2xl));
   padding-inline: var(--pad-x);
-  overflow-x: clip;
 }
-.work__inner {
+.work__header {
   max-width: var(--max-w);
   margin-inline: auto;
-  display: grid;
-  gap: clamp(3rem, 6vw, 5rem);
-}
-@media (min-width: 900px) {
-  .work__inner { grid-template-columns: 7fr 13fr; align-items: start; }
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 .work__title {
   font-family: var(--font-display);
@@ -673,24 +671,32 @@ h1, h2, h3 {
   line-height: 1.5;
 }
 
-/* Mobile: clean 2-col grid */
-.work__gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+/* Stripe layout */
+.work__gallery { display: block; }
+
+.work__stripe {
+  display: flex;
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  width: 100vw;
+  margin-left: calc(-1 * var(--pad-x));
+  transform: rotate(-7deg);
+}
+.work__stripe--2 {
+  margin-top: clamp(1.25rem, 2vw, 1.75rem);
 }
 
-/* Card base (shared) */
 .work-card {
-  position: relative;
+  flex: 1;
+  min-width: 0;
   background: var(--white);
   padding: 0.6rem 0.6rem 2rem;
   box-shadow:
     0 4px 20px oklch(18% 0.012 80 / 0.12),
     0 0 0 1px oklch(85% 0.009 80);
-  transition:
-    transform  var(--dur-mid) var(--ease-out-quart),
-    box-shadow var(--dur-mid) var(--ease-out-quart);
+  transition: box-shadow var(--dur-mid) var(--ease-out-quart);
+}
+.work-card:hover {
+  box-shadow: 0 14px 40px oklch(18% 0.012 80 / 0.2), 0 0 0 1px oklch(85% 0.009 80);
 }
 .work-card__img-wrap {
   aspect-ratio: 4 / 3;
@@ -713,31 +719,14 @@ h1, h2, h3 {
   );
 }
 
-/* Desktop: scattered pile — cards overlap via negative margin-top + rotation */
-@media (min-width: 900px) {
+/* Mobile: 2-col grid, no diagonal */
+@media (max-width: 767px) {
   .work__gallery {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.5rem;
-    row-gap: 0;
-    padding: 1.5rem 1rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  .work-card--1 { transform: rotate(-13deg); z-index: 2; }
-  .work-card--2 { transform: rotate(18deg);  z-index: 3; margin-top: 22px; }
-  .work-card--3 { transform: rotate(-8deg);  z-index: 4; margin-top: -85px; }
-  .work-card--4 { transform: rotate(14deg);  z-index: 5; margin-top: -70px; }
-  .work-card--5 {
-    transform: rotate(-10deg);
-    z-index: 6;
-    margin-top: -90px;
-    grid-column: 1 / -1;
-    width: 50%;
-    margin-inline: auto;
-  }
-  .work-card:hover {
-    transform: rotate(0deg) scale(1.04) !important;
-    box-shadow: 0 20px 60px oklch(18% 0.012 80 / 0.2);
-    z-index: 20 !important;
-  }
+  .work__stripe { display: contents; }
 }
 
 /* ================================================

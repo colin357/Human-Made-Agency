@@ -538,38 +538,17 @@ h1, h2, h3 {
 }
 .team-slide.slide--active .member:hover .member__photo { transform: scale(1.03); }
 
-/* Signature slot — layered above gradient, below name */
-.member__sig-wrap {
-  position: absolute;
-  bottom: 5.25rem;
-  left: 0.8rem;
-  z-index: 3;
-  width: 160px;
-  height: 48px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
-}
-.member__sig-img {
-  position: absolute;
-  bottom: 3px;
-  left: 0;
-  max-height: 44px;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: left bottom;
-  filter: brightness(10);
-  display: block;
-}
-
 /* Name overlaid at photo bottom */
 .member__name {
   position: absolute;
   bottom: 0.65rem;
   left: 0.8rem;
+  right: 0.8rem;
   z-index: 4;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(3rem, 9vw, 5.5rem);
-  line-height: 0.88;
+  font-size: clamp(1.75rem, 5vw, 3.25rem);
+  line-height: 0.92;
   color: var(--white);
   user-select: none;
   pointer-events: none;
@@ -587,7 +566,6 @@ h1, h2, h3 {
 }
 .member__photo-wrap.member__photo--missing::after { opacity: 0; }
 .member__photo-wrap.member__photo--missing .member__name { color: var(--accent); }
-.member__photo-wrap.member__photo--missing .member__sig-wrap { border-color: rgba(0,0,0,0.12); }
 
 .member__info {
   padding-top: 0.875rem;

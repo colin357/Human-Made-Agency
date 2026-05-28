@@ -379,6 +379,10 @@ h1, h2, h3 {
   transition: color var(--dur-fast) var(--ease-out-quart);
 }
 .service:hover .service__number { color: var(--accent); }
+
+@media (max-width: 767px) {
+  .service__number { color: var(--accent); }
+}
 .service__name {
   font-family: var(--font-display);
   font-weight: 800;

@@ -195,6 +195,11 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
   color: var(--ink);
 }
+.nav__heart {
+  color: var(--accent);
+  font-size: 0.85em;
+  vertical-align: middle;
+}
 
 /* ================================================
    HERO
@@ -648,7 +653,7 @@ h1, h2, h3 {
 .work {
   overflow: hidden;
   position: relative;
-  height: clamp(500px, 72vh, 780px);
+  height: clamp(360px, 48vh, 500px);
   padding-top: clamp(2rem, 3vw, 3rem);
   padding-inline: var(--pad-x);
 }
@@ -717,15 +722,17 @@ h1, h2, h3 {
 }
 @media (max-width: 767px) {
   .work {
-    height: auto;
-    padding-bottom: clamp(2rem, 4vw, 3rem);
+    height: clamp(480px, 80vw, 640px);
+    padding-bottom: 0;
   }
   .work__gallery {
-    position: static;
-    width: 100%;
-    transform: none;
-    margin-top: 1.5rem;
-    grid-template-columns: 1fr;
+    top: 42%;
+    right: auto;
+    left: -8%;
+    width: 116%;
+    grid-template-columns: repeat(3, 1fr);
+    transform: rotate(10deg);
+    transform-origin: top left;
   }
 }
 

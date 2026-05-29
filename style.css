@@ -691,7 +691,7 @@ h1, h2, h3 {
 }
 .work-card {
   background: var(--white);
-  padding: 0.5rem 0.5rem 0.8rem;
+  padding: 0.5rem 0.5rem 1.5rem;
   box-shadow:
     0 4px 20px oklch(18% 0.012 80 / 0.12),
     0 0 0 1px oklch(85% 0.009 80);

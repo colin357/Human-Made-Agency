@@ -646,6 +646,18 @@ h1, h2, h3 {
 }
 .logo--missing .trusted__logo-img { display: none; }
 .logo--missing .trusted__logo-text { display: block; }
+@media (max-width: 767px) {
+  .trusted__logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    width: 100%;
+  }
+  .trusted__logo-img {
+    height: 48px;
+    max-width: 140px;
+  }
+}
 
 /* ================================================
    OUR WORK
